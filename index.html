@@ -15,6 +15,7 @@
     <title>PipBoy</title>
 </head>
 <body>
+    <!-- Main Navigation -->
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="collapse navbar-collapse" id="mainNav">
             <ul class="navbar-nav mr-auto">
@@ -37,6 +38,7 @@
         </div>
     </nav>
     
+    <!-- Tabs and Content -->
     <ul class="nav nav-tabs" role="tablist">
         <li class="nav-item">
             <a href="#status" class="nav-link active" data-toggle="tab" role="tab">STATUS</a>
@@ -51,15 +53,38 @@
     
     <div class="tab-content">
         <div class="tab-pane active" id="status" role="tabpanel">
-            STATUS
+            <!-- STATUS -->
+            <div class="center-image">
+                <img src="img/vault_boy_png.png" alt="Vault Boy">
+            </div>
         </div>
+
         <div class="tab-pane" id="special" role="tabpanel">
+            <!-- SPECIAL -->
             SPECIAL
         </div>
+
         <div class="tab-pane" id="perks" role="tabpanel">
+            <!-- PERKS -->
             PERKS
         </div>
     </div>
+
+    <!-- Bottom Navigation -->
+    <navbar class="navbar navbar-light pip-footer">
+        <div class="row">
+            <div class="col-3">
+                HP 90/90
+            </div>
+            <div class="col-6">
+                LEVEL 1
+                <div class="level-progress"></div>
+            </div>
+            <div class="col-3">
+                AP 50/50
+            </div>
+        </div>
+    </navbar>
 
 </body>
 </html>
