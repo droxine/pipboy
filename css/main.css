@@ -1,23 +1,58 @@
+@font-face {
+  font-family: Pipboy;
+  src: url("../monofonto.ttf") format("truetype"); }
 body {
+  font-family: Pipboy, sans-serif;
   color: #14fe17;
   background: #272b23; }
-
-ul li.nav-item a.nav-link, ul li.nav-item a.nav-link, ul li.navbar-item.active a.nav-link, ul li.navbar-item.active a.nav-link {
-  color: #14fe17 !important; }
-
-.center-image img {
-  margin: auto;
-  display: block;
-  position: relative;
-  max-height: 300px;
-  margin-top: 100px;
-  filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(7) brightness(1) contrast(2); }
-
-.pip-footer {
-  display: block;
-  position: fixed;
-  bottom: 0;
-  width: calc(100% - 20px);
-  margin: 10px; }
+  body::after {
+    height: 100%;
+    width: 100%;
+    content: "";
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: repeating-radial-gradient(0deg, rgba(0, 0, 0, 0.5) 1px, rgba(0, 0, 0, 0.4) 1px, transparent 1px, transparent 2px);
+    opacity: .3;
+    z-index: 1000000;
+    pointer-events: none; }
+  body .navbar {
+    border-bottom: 2px solid;
+    margin: 0px 10px; }
+    body .navbar::before, body .navbar::after {
+      height: 5px;
+      width: 2px;
+      content: "";
+      position: absolute;
+      display: block;
+      z-index: 5000;
+      background: #14fe17;
+      bottom: -6px; }
+    body .navbar::before {
+      left: 0px; }
+    body .navbar::after {
+      right: 0px; }
+  body ul li.nav-item a.nav-link, body ul li.nav-item a.nav-link, body ul li.navbar-item.active a.nav-link, body ul li.navbar-item.active a.nav-link {
+    color: #14fe17 !important;
+    text-align: center; }
+  body .navbar-light ul.navbar-nav {
+    width: 100%; }
+    body .navbar-light ul.navbar-nav li {
+      display: block;
+      position: relative;
+      width: 100%; }
+  body .center-image img {
+    margin: auto;
+    display: block;
+    position: relative;
+    max-height: 300px;
+    margin-top: 100px;
+    filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(7) brightness(1) contrast(2); }
+  body .pip-footer {
+    display: block;
+    position: fixed;
+    bottom: 0;
+    width: calc(100% - 20px);
+    margin: 10px; }
 
 /*# sourceMappingURL=main.css.map */

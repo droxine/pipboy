@@ -1,29 +1,89 @@
-body {
-    color: #14fe17;
-    background: #272b23;
+@font-face {
+    font-family: Pipboy;
+    src: url("../monofonto.ttf") format('truetype');
 }
 
-ul {
-    li.nav-item, li.navbar-item.active {
-        a.nav-link, a.nav-link {
-            color: #14fe17 !important;
+//Variables
+$mainColor: #14fe17;
+
+body {
+    font-family: Pipboy, sans-serif;
+    color: $mainColor;
+    background: #272b23;
+
+    &::after {
+        height: 100%;
+        width: 100%;
+        content: "";
+        position: absolute;
+        top: 0px;
+        left: 0px;
+        background: repeating-radial-gradient(0deg, rgba(0,0,0,.5) 1px, rgba(0,0,0,.4) 1px, transparent 1px, transparent 2px);
+        opacity: .3;
+        z-index: 1000000;
+        pointer-events: none;
+    }
+
+    .navbar {
+        border-bottom: 2px solid;
+        margin: 0px 10px;
+
+        &::before, &::after {
+            height: 5px;
+            width: 2px;
+            content: "";
+            position: absolute;
+            display: block;
+            z-index: 5000;
+            background: $mainColor;
+            bottom: -6px;
         }
+
+        &::before {
+            left: 0px;
+        }
+
+        &::after {
+            right: 0px;
+        }
+    }
+
+    ul {
+        li.nav-item, li.navbar-item.active {
+            a.nav-link, a.nav-link {
+                color: $mainColor !important;
+                text-align: center;
+            }
+        } 
+    }
+
+    .navbar-light {
+        ul.navbar-nav {
+            width: 100%;
+
+            li {
+                display: block;
+                position: relative;
+                width: 100%;
+            }
+        }
+    }
+    
+    .center-image img {
+        margin: auto;
+        display: block;
+        position: relative;
+        max-height: 300px;
+        margin-top: 100px;
+        filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(7) brightness(1) contrast(2);
+    }
+    
+    .pip-footer {
+        display: block;
+        position: fixed;
+        bottom: 0;
+        width: calc(100% - 20px);
+        margin: 10px;
     }
 }
 
-.center-image img {
-    margin: auto;
-    display: block;
-    position: relative;
-    max-height: 300px;
-    margin-top: 100px;
-    filter: grayscale(1) sepia(100%) hue-rotate(55deg) saturate(7) brightness(1) contrast(2);
-}
-
-.pip-footer {
-    display: block;
-    position: fixed;
-    bottom: 0;
-    width: calc(100% - 20px);
-    margin: 10px;
-}

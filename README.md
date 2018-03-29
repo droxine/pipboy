@@ -7,3 +7,5 @@ Webpage based on the Pipboy from FallOut 4
 - Javascript
 - jQuery Library
 - Tether JS Library (tether.io)
+
+*Font used: monofonto.ttf
